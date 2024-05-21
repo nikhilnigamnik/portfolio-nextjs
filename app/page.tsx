@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button'
-import { AnimatedTabs } from '@/components/ui/tabs'
+
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <section>
 
       <h2>
         This is a page
@@ -15,7 +15,7 @@ const page = () => {
       <Button>
         Hello
       </Button>
-    </div>
+    </section>
   )
 }
 

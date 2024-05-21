@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { ModeToggle } from "../toggle-theme";
+import Link from "next/link";
 
 
 type AnimatedTabsProps = {
@@ -22,21 +23,29 @@ export function Navbar({
   const [activeIdx, setActiveIdx] = useState<number>(0);
 
   const tabs = [
-    {
-      title: "Product",
-    },
-    {
-      title: "Services",
-    },
+
     {
       title: "About",
+      link: "/about"
     },
+    {
+      title: "Blog",
+      link: "/blog"
+    },
+    {
+      title: "Projects",
+      link: "/projects"
+    },
+    {
+      title: "Contact",
+      link: "/contact"
+    }
   ];
 
   return (
-    <nav className="max-w-3xl mx-auto px-4 my-4">
+    <nav className="max-w-3xl mx-auto px-4 my-4 sticky top-4">
       <div className="flex justify-between items-center  border rounded-xl backdrop-blur-3xl py-2 px-3">
-        <h1 className="hidden md:block">Company Name</h1>
+        <h1 className="hidden md:block">Nikhil Nigam</h1>
         <div
           className={cn(
             "relative flex flex-wrap items-center justify-center",
@@ -44,7 +53,8 @@ export function Navbar({
           )}
         >
           {tabs.map((tab, index) => (
-            <button
+            <Link
+              href={tab.link}
               key={tab.title}
               onClick={() => setActiveIdx(index)}
               className={cn(
@@ -72,7 +82,7 @@ export function Navbar({
               >
                 {tab.title}
               </span>
-            </button>
+            </Link>
           ))}
         </div>
         <div className="flex justify-between items-center gap-4">
