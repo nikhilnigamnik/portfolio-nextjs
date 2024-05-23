@@ -1,13 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { ModeToggle } from "../toggle-theme";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 
 type AnimatedTabsProps = {
   containerClassName?: string;
@@ -20,13 +17,12 @@ export function Navbar({
   activeTabClassName,
   tabClassName,
 }: AnimatedTabsProps) {
-  const [activeIdx, setActiveIdx] = useState<number>(0);
+  const pathname = usePathname();
 
   const tabs = [
-
     {
-      title: "About",
-      link: "/about"
+      title: "Profile",
+      link: "/"
     },
     {
       title: "Blog",
@@ -42,10 +38,11 @@ export function Navbar({
     }
   ];
 
+  const activeIdx = tabs.findIndex(tab => tab.link === pathname);
+
   return (
-    <nav className="max-w-3xl mx-auto px-4 my-4 sticky top-4">
-      <div className="flex justify-between items-center  border rounded-xl backdrop-blur-3xl py-2 px-3">
-        <h1 className="hidden md:block">Nikhil Nigam</h1>
+    <nav className="max-w-3xl fixed left-4 right-4 mx-auto top-4 z-20">
+      <div className="flex justify-between items-center border rounded-full backdrop-blur-3xl py-2 px-3">
         <div
           className={cn(
             "relative flex flex-wrap items-center justify-center",
@@ -56,7 +53,6 @@ export function Navbar({
             <Link
               href={tab.link}
               key={tab.title}
-              onClick={() => setActiveIdx(index)}
               className={cn(
                 "group relative z-[1] rounded-full px-4 py-1 text-nowrap",
                 { "z-0": activeIdx === index },
@@ -77,7 +73,7 @@ export function Navbar({
               <span
                 className={cn(
                   "relative text-sm block font-medium duration-200",
-                  activeIdx === index && "delay-100 dark:text-black text-white "
+                  activeIdx === index && "delay-100 dark:text-black text-white"
                 )}
               >
                 {tab.title}
@@ -85,12 +81,7 @@ export function Navbar({
             </Link>
           ))}
         </div>
-        <div className="flex justify-between items-center gap-4">
-          <GitHubLogoIcon />
-          <TwitterLogoIcon />
-          <LinkedInLogoIcon />
-          <ModeToggle />
-        </div>
+        <ModeToggle />
       </div>
     </nav>
   );

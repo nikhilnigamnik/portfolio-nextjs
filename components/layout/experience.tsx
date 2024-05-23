@@ -1,0 +1,64 @@
+import React from "react";
+import Title from "../ui/title";
+
+const experiences = [
+    {
+        id: 1,
+        date: "2024 - Present",
+        role: "Full Stack Developer",
+        type: "Internship - (Remote)",
+        company: "Skeon.tech",
+
+    },
+    {
+        id: 2,
+        date: "Nov 2023 - Feb 2024",
+        role: "Full Stack Developer",
+        type: "Internship",
+        company: "Tankar Solutions",
+    },
+    {
+        id: 3,
+        date: "Aug 2023 - Nov 2023",
+        role: "Frontend Developer",
+        type: "Internship - (Remote)",
+        company: "Kylo Apps",
+    },
+
+
+];
+
+const Experience = () => {
+    return (
+        <section className="mt-10 flex flex-col gap-4">
+            <Title title="Experience" />
+
+            {experiences.map((experience) => (
+                <div className="flex gap-x-3">
+                    <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+                        <div className="relative z-10 size-7 flex justify-center items-center">
+                            <div className="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
+                        </div>
+                    </div>
+
+                    <div className="grow pt-0.5 pb-8">
+                        <p className="flex gap-x-1.5  text-sm">
+                            <span>{experience.role}</span>
+                            <span>•</span>
+                            <span>{experience.date}</span>
+                        </p>
+                        <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                            {experience.type}
+                        </p>
+                        <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                            {experience.company}
+                        </p>
+                    </div>
+                </div>
+            ))}
+            <hr />
+        </section>
+    );
+};
+
+export default Experience;

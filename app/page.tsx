@@ -1,21 +1,19 @@
-import { Button } from '@/components/ui/button'
+import Experience from '@/components/layout/experience'
+import Hero from '@/components/layout/hero'
+import Skills from '@/components/layout/skills'
+import Projects from '@/components/layout/project'
 
 import React from 'react'
 
 const page = () => {
   return (
-    <section>
+    <>
+      <Hero />
+      <Skills />
+      <Experience />
+      <Projects />
 
-      <h2>
-        This is a page
-      </h2>
-      <p>
-        This is a page content
-      </p>
-      <Button>
-        Hello
-      </Button>
-    </section>
+    </>
   )
 }
 
