@@ -4,6 +4,7 @@ import Skills from '@/components/layout/skills'
 import Projects from '@/components/layout/project'
 
 import React from 'react'
+import Blog from '@/components/layout/blog'
 
 const page = () => {
   return (
@@ -12,6 +13,8 @@ const page = () => {
       <Skills />
       <Experience />
       <Projects />
+      <Blog />
+
 
     </>
   )
