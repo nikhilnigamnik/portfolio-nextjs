@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import React from "react";
+import CodeBlock from "./code-block";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -51,11 +51,7 @@ function RoundedImage(props) {
 }
 
 function Code({ children }) {
-  return (
-    <SyntaxHighlighter language="javascript" style={gruvboxDark} showLineNumbers>
-      {children}
-    </SyntaxHighlighter>
-  );
+  return <CodeBlock>{children}</CodeBlock>;
 }
 
 function slugify(str) {
