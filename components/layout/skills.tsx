@@ -7,8 +7,7 @@ import Title from '../ui/title';
 const skills = [
     { title: 'Frontend', skills: ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'NextJs', 'Tailwind CSS', 'ReactNative', "TypeScript"] },
     { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'Firebase', 'RESTful APIs'] },
-    { title: 'DevOps', skills: ['Git', 'GitHub', 'CI/CD', 'Vercel'] },
-    { title: 'Tools', skills: ['VS Code', 'Postman'] },
+    { title: 'Tools', skills: ['VS Code', 'Postman', 'Git', 'Github'] },
     { title: 'UI/UX', skills: ['Figma', 'Adobe XD', 'Photoshop'] }
 ];
 
@@ -61,7 +60,7 @@ const Skills = () => {
                 ))}
 
             </div>
-            
+
 
         </div>
     )

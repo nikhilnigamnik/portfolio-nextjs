@@ -16,8 +16,11 @@ export function Navbar({
   containerClassName,
   activeTabClassName,
   tabClassName,
+
 }: AnimatedTabsProps) {
   const pathname = usePathname();
+
+
 
   const tabs = [
     {
@@ -26,7 +29,7 @@ export function Navbar({
     },
     {
       title: "Blog",
-      link: "#blog"
+      link: "/blog"
     },
 
     {
@@ -35,11 +38,17 @@ export function Navbar({
     }
   ];
 
-  const activeIdx = tabs.findIndex(tab => tab.link === pathname);
+  const activeIdx = tabs.findIndex(tab => {
+    if (tab.title === "Blog") {
+      return pathname === "/blog" || pathname.startsWith("/blog/");
+    }
+    return tab.link === pathname;
+  });
+
 
   return (
     <nav className="max-w-3xl fixed left-4 right-4 mx-auto top-4 z-20">
-      <div className="flex justify-between items-center border rounded-full backdrop-blur-3xl py-2 px-3">
+      <div className="flex justify-between items-center border rounded-full backdrop-blur-3xl py-1 px-2">
         <div
           className={cn(
             "relative flex flex-wrap items-center justify-center",
