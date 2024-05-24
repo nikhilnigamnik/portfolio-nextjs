@@ -7,7 +7,8 @@ import Title from '../ui/title';
 const skills = [
     { title: 'Frontend', skills: ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'NextJs', 'Tailwind CSS', 'ReactNative', "TypeScript"] },
     { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'Firebase', 'RESTful APIs'] },
-    { title: 'DevOps', skills: ['Git', 'GitHub', 'CI/CD', 'Heroku', 'Vercel'] },
+    { title: 'DevOps', skills: ['Git', 'GitHub', 'CI/CD', 'Vercel'] },
+    { title: 'Tools', skills: ['VS Code', 'Postman'] },
     { title: 'UI/UX', skills: ['Figma', 'Adobe XD', 'Photoshop'] }
 ];
 
@@ -22,7 +23,7 @@ const Tab = ({ text, selected, setSelected }: TabProps) => {
         <button
             onClick={() => setSelected(text)}
             className={`${selected ? 'text-white dark:text-black' : ''
-                } relative rounded-md px-2 py-1 text-sm font-medium transition-colors`}
+                } relative rounded-md px-4 py-1 text-sm font-medium transition-colors`}
         >
             <span className="relative z-10">{text}</span>
             {selected && (
@@ -41,9 +42,9 @@ const Skills = () => {
     const selectedSkills = skills.find(skill => skill.title === selected)?.skills || [];
 
     return (
-        <div className="mt-10 flex flex-col gap-4">
+        <div className="mt-14 flex flex-col gap-4">
             <Title title="Skills" />
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2 ">
                 {skills.map((tab, index) => (
                     <Tab
                         text={tab.title}
@@ -56,11 +57,12 @@ const Skills = () => {
             <div className="flex  gap-2 text-sm flex-col">
 
                 {selectedSkills.map((skill, index) => (
-                    <button className='underline  rounded-full px-3 w-fit' key={index}>{skill}</button>
+                    <button className='underline  rounded-full px-3  w-fit' key={index}>{skill}</button>
                 ))}
 
             </div>
-            <hr />
+            
+
         </div>
     )
 }

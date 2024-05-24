@@ -5,14 +5,20 @@ import Projects from '@/components/layout/project'
 
 import React from 'react'
 import Blog from '@/components/layout/blog'
+import Education from '@/components/layout/education'
 
 const page = () => {
+
+
   return (
     <>
       <Hero />
       <Skills />
       <Experience />
+      <Education />
       <Projects />
+
+
       <Blog />
 
 

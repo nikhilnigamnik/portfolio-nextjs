@@ -26,7 +26,7 @@ export function Navbar({
     },
     {
       title: "Blog",
-      link: "/blog"
+      link: "#blog"
     },
 
     {

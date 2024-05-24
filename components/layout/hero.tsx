@@ -56,7 +56,6 @@ const Hero = () => {
           I love to write about web development, programming and technology. I'm currently working on a few projects and writing blog posts.
         </span>
       </p>
-      <hr />
     </div>
   )
 }

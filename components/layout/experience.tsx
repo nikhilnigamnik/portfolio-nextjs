@@ -30,11 +30,11 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section className="mt-10 flex flex-col gap-4">
+        <section className="mt-14 flex flex-col gap-4">
             <Title title="Experience" />
 
             {experiences.map((experience) => (
-                <div className="flex gap-x-3">
+                <div key={experience.id} className="flex gap-x-3">
                     <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
                         <div className="relative z-10 size-7 flex justify-center items-center">
                             <div className="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
@@ -56,7 +56,7 @@ const Experience = () => {
                     </div>
                 </div>
             ))}
-            <hr />
+
         </section>
     );
 };

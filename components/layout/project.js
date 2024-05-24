@@ -20,7 +20,7 @@ const items = [
 
 const Projects = () => {
   return (
-    <section className="mt-10 flex flex-col gap-4">
+    <section className="mt-14 flex flex-col gap-4">
       <Title title="Projects" />
       <div className="flex flex-col gap-4">
         {items.map((item) => (
@@ -38,7 +38,7 @@ const Projects = () => {
           </a>
         ))}
       </div>
-      <hr />
+    
     </section>
   );
 };
