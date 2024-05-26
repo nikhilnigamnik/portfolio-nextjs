@@ -4,6 +4,8 @@ publishedAt: "2024-04-07"
 summary: "A comprehensive guide to various UI libraries available for React Native to enhance your app development experience."
 ---
 
+![image-banner](https://www.appstud.com/wp-content/uploads/2018/03/React-Native-Titre.png)
+
 # UI Libraries in React Native
 
 React Native has a rich ecosystem of UI libraries that can help you build beautiful and performant mobile applications. Here are some popular ones:
@@ -12,111 +14,62 @@ React Native has a rich ecosystem of UI libraries that can help you build beauti
 
 [Visit](https://callstack.github.io/react-native-paper/)
 
-React Native Paper is a high-quality, standard-compliant Material Design library that has you covered in all major use-cases.
+React Native Paper is the cross-platform UI kit library containing a collection of customizable and production-ready components, which by default are following and respecting the Google’s Material Design guidelines.
 
-```
-import * as React from 'react';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
+## 2. React Native UI Lib
 
-const MyComponent = () => (
-  <Card>
-    <Card.Content>
-      <Title>Card Title</Title>
-      <Paragraph>Card content</Paragraph>
-    </Card.Content>
-    <Card.Actions>
-      <Button>Cancel</Button>
-      <Button>Ok</Button>
-    </Card.Actions>
-  </Card>
-);
+[Visit](https://wix.github.io/react-native-ui-lib/)
 
-export default MyComponent;
-```
-
-## 2. NativeBase
-
-[Visit](https://nativebase.io/)
-
-NativeBase is an open-source framework that enables developers to build high-quality mobile apps using React Native. It provides a wide range of components that can be easily customized.
-
-```jsx
-import React from "react";
-import { Button, Text } from "native-base";
-
-const MyComponent = () => (
-  <Button>
-    <Text>Click Me!</Text>
-  </Button>
-);
-
-export default MyComponent;
-```
+React Native UI Lib is a set of native components and layouts for building mobile applications. It provides a set of components that are optimized for performance and are easy to use.
 
 ## 3. React Native Elements
 
 [Visit](https://reactnativeelements.com/)
 
-React Native Elements is a cross-platform UI toolkit that puts consistency and simplicity first. It provides a consistent look and feel across both iOS and Android.
+As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and React Native for Web.
 
-```
-import React from 'react';
-import { Button } from 'react-native-elements';
+## 4. Fluent UI
 
-const MyComponent = () => (
-  <Button
-    title="Solid Button"
-  />
-);
+[Visit](https://developer.microsoft.com/en-us/fluentui#/get-started)
 
-export default MyComponent;
-```
+Fluent UI React is the official open-source React front-end framework designed to build experiences that fit seamlessly into a broad range of Microsoft products. It provides robust, up-to-date, accessible components which are highly customizable using CSS-in-JS. Get started with Fluent UI React.
 
-## 4. UI Kitten
+## 5. Tamagui
+
+[Visit](https://tamagui.dev/)
+
+Tamagui lets you share more code between web and native apps without sacrificing the two things that typically suffer when you do: performance and code quality.
+
+It does this with an optimizing compiler that outputs platform-specific optimizations - it turns styled components, even with complex logic or cross-module imports, into a simple div alongside atomic CSS on the web, or a View with its style objects hoisted on native.
+
+## 6. NativeWind
+
+[Visit](https://www.nativewind.dev/)
+
+NativeWind uses Tailwind CSS as scripting language to create a universal style system for React Native. NativeWind components can be shared between platforms and will output their styles as CSS StyleSheet on web and StyleSheet.create for native.
+
+## 7. Gluestack UI
+
+[Visit](https://ui.gluestack.io/)
+
+gluestack-ui is a universal UI library that provides optionally styled and accessible components. These components are designed for easy integration into applications developed with React and React Native.
+
+## 8. Ignite UI
+
+[Visit](https://docs.infinite.red/ignite-cli/)
+
+Ignite comes with a number of customizable built-in React Native components -- sort of a lightweight design system, in a way. It's the system we (at Infinite Red) tend to use the most often with our own custom mobile designs, and is designed to emphasize flexibility and customizability over out-of-the-box power.
+
+## 9. React Native Resuables
+
+[Visit](https://rnr-docs.vercel.app/getting-started/introduction/)
+
+Universal shadcn/ui for React Native: Copy, paste, and tailor components to suit your specific requirements.
+
+React Native Reusables is a collection of reusable components and hooks for React Native. It is designed to help you build your app faster by providing you with a set of components that you can use out of the box.
+
+## 10. React Native UI Kitten
 
 [Visit](https://akveo.github.io/react-native-ui-kitten/)
 
-UI Kitten is a React Native UI Library based on Eva Design System with a set of easily customizable elements. It offers a clean and modern look to your app.
-
-```
-import React from 'react';
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
-import * as eva from '@eva-design/eva';
-
-const MyComponent = () => (
-  <ApplicationProvider {...eva} theme={eva.light}>
-    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text category='h1'>Hello World</Text>
-    </Layout>
-  </ApplicationProvider>
-);
-
-export default MyComponent;
-```
-
-## 5. React Native UI Lib
-
-[Visit](https://wix.github.io/react-native-ui-lib/)
-
-React Native UI Lib is a UI Toolset and Components Library for React Native from Wix. It provides a rich set of components and tools to help you build amazing user interfaces.
-
-```
-import React from 'react';
-import { View, Text, Button } from 'react-native-ui-lib';
-
-const MyComponent = () => (
-  <View>
-    <Text text60>Button example</Text>
-    <Button label="Press me" />
-  </View>
-);
-
-export default MyComponent;
-```
-
-These libraries can significantly speed up your development process and ensure your app has a professional look and feel. Choose the one that fits your design requirements and project scope.
-
-<blockquote>
-  Tip: Always check the documentation and community support for the library you
-  choose to ensure it meets your needs and is actively maintained.
-</blockquote>
+UI Kitten is a React Native UI Library that allows you creating stunning multi-brand cross-platform mobile applications. The library is based on Eva Design System which brings consistency and scalability in the design and development process. It contains a set of general purpose UI components styled in a similar way. And the most awesome thing: the themes can be changed in the runtime, with no need to reload the application.

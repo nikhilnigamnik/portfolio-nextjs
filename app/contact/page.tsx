@@ -3,10 +3,11 @@ import { Input } from '@/components/ui/input'
 import React from 'react'
 
 import type { Metadata } from 'next'
+import { Textarea } from '@/components/ui/textarea'
 
 export const metadata: Metadata = {
-  title: 'Contact - Nikhil Nigam - Developer, Designer',
-  description: " Get in touch with me for your next project or idea.",
+    title: 'Contact - Nikhil Nigam - Developer, Designer',
+    description: " Get in touch with me for your next project or idea.",
 }
 
 
@@ -20,7 +21,7 @@ const page = () => {
 
                 <Input placeholder="Name" />
                 <Input placeholder="Email" />
-                <Input placeholder="Message" />
+                <Textarea placeholder="Message" />
                 <Button>
                     Send
                 </Button>

@@ -94,7 +94,7 @@ let components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
-  Image: RoundedImage,
+  img: RoundedImage,
   a: CustomLink,
   code: (props) => <Code {...props} />,
   Table,

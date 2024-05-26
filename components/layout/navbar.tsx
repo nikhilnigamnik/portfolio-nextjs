@@ -35,6 +35,10 @@ export function Navbar({
     {
       title: "Contact",
       link: "/contact"
+    },
+    {
+      title: "Store",
+      link: "/store"
     }
   ];
 
